@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use 'folke/tokyonight.nvim'
+  use 'folke/tokyonight.nvim' -- colorscheme: Tokyonight
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use('nvim-treesitter/playground')
@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('ThePrimeagen/vim-be-good')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -45,6 +46,22 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
   }
+  use('sbdchd/neoformat')
+
+  use('hoob3rt/lualine.nvim') -- lualine plugin
+  use("lukas-reineke/indent-blankline.nvim") -- adds indentation lines to all lines
+
+
+  --use('preservim/nerdtree')
+  --[[
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+  --]]
 
 
 

@@ -40,3 +40,12 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+
+-- my personal remaps
+vim.keymap.set("c", "clipcopy", "w !pbcopy")
+vim.keymap.set("c", "clippaste", "r !pbpaste")
+
+
+-- do not yank on x
+vim.keymap.set("n", "x", '"_x')
