@@ -11,7 +11,9 @@ return require('packer').startup(function(use)
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+	  requires = {
+      {'nvim-lua/plenary.nvim'},
+    }
   }
 
   use 'folke/tokyonight.nvim' -- colorscheme: Tokyonight
@@ -50,6 +52,23 @@ return require('packer').startup(function(use)
 
   use('hoob3rt/lualine.nvim') -- lualine plugin
   use("lukas-reineke/indent-blankline.nvim") -- adds indentation lines to all lines
+
+  use 'windwp/nvim-ts-autotag' -- plugins for html closing tags
+  use 'windwp/nvim-autopairs' -- plugin for paring all brackets
+  use { 'numToStr/Comment.nvim',
+    requires = {
+      'JoosepAlviste/nvim-ts-context-commentstring'
+    }
+  }
+  use 'norcalli/nvim-colorizer.lua'
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use 'akinsho/nvim-bufferline.lua'
+  -- use 'github/copilot.vim'
+
+  use 'lewis6991/gitsigns.nvim'
 
 
   --use('preservim/nerdtree')
